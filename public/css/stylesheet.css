@@ -296,8 +296,8 @@ margin-top: 10%;
 
 
 
-input[placeholder="Your name"]#subdomain{
- 
+input[placeholder="What's your favor?"]#subdomain{
+
 
 /* Label/Input */
 font-family: Helvetica;
@@ -319,7 +319,7 @@ color: #D7D5DF;
 }
 
 input[placeholder="Kg"]#subdomain1{
- 
+
 
 /* Label/Input */
 font-family: Helvetica;
@@ -343,7 +343,7 @@ transition: color 3s;
 
 
 input[placeholder="Your name"]#subdomain:hover{
- 
+
 
 /* Label/Input */
 font-family: Helvetica;
@@ -364,7 +364,7 @@ color: #000;
 }
 
 input[placeholder="Kg"]#subdomain1:hover{
- 
+
 
 /* Label/Input */
 font-family: Helvetica;

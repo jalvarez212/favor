@@ -1,6 +1,6 @@
  	// app methods
   	function getName() {
-  				localStorage.setItem('name', el.value);
+  				localStorage.setItem('Favor_1', el.value);
   				console.log(localStorage);
   				//settimeout hides h1 text until animation is ready for next content
   				setTimeout(function(){
@@ -16,8 +16,8 @@
   			}
 
     function storeName(){
-          var name = document.querySelector('.nameValue');
-          name.innerText = `${localStorage.name}`+'?'
+          var favor_1 = document.querySelector('.nameValue');
+          favor_1.innerText = `${localStorage.name}`+'?'
 
     }
 
@@ -25,7 +25,7 @@
   				//set local storage and display next onboarding element
   				localStorage.setItem('Kg', elKg.value);
   				console.log(localStorage);
-  				setTimeout(function(){ 
+  				setTimeout(function(){
   					el1.style.display = 'none';
   					el2.style.display = 'flex';
   				}, 300);
@@ -64,6 +64,6 @@
   	function animate(x){
   				//animate the bottom sheet holding the onboarding content/input in an up and down animation
   				x.style.top = '100%';
-  				setTimeout(function(){ x.style.top = '15%'; }, 500); 
+  				setTimeout(function(){ x.style.top = '15%'; }, 500);
 
   			}
