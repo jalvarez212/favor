@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>favor</title>
+
+ </head>
+ <body>
+
+ </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>favor</title>
+   <script type="text/javascript">
+     if (window.ethereum) {
+       //window.web3 = new Web3(ethereum);
+       try {
+         // Request account access if needed
+         ethereum.enable();
+       } catch (error) {
+        alert('Please enable web3 to use this application');
+         // User denied account access…
+       }
+     } else if (window.web3) {
+       // Legacy dapp browsers…
+       window.web3 = new Web3(web3.currentProvider);
+     } else {
+       // Non-dapp browsers…
+       alert('Please enable web3 to use this application');
+       console.log(
+         'Non-Ethereum browser detected. You should consider trying Status!'
+       );
+     }
+     console.log(web3);
+
+
+   </script>
+ <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
+ </head>
+ <body>
+
+   </div>
+   <div class="header">
+     <div class="back">Back</div>
+     <img class="progress" src="./img/Progress.png"></img>
+     <img class="progress1" src="./img/Progress1.png"></img>
+     <img class="progress2" src="./img/Progress2.png"></img>
+   </div>
+
+   <div class="bottomsheet">
+
+     <div class="content">
+       <h1>Hi there,
+         <br>
+         how should
+         <br>
+         we call you?
+         <br>
+       </h1>
+         <input id="subdomain" placeholder="Your name"></input>
+       <button id="btn">Continue</button>
+
+     </div>
+
+
+
+       <div id="content1">
+       <h1 class ="weight">What's
+         <br>
+         your weight,
+         <br>
+         </h1>
+       <h1 class="nameValue"></h1>
+       <input id="subdomain1" placeholder="Kg"></input>
+
+
+
+       <button id="btn1" type="submit">Continue</button>
+     </div>
+
+     <div id="content2">
+         <h1 class='weight'>What's your
+         <br>
+         preferred
+         <br>
+         workout?
+         </h1>
+       <div id="mode">
+       <!-- I toke some shortcuts and used images for the easy/medium/hard/extreme tiles -->
+
+         <img id="easy_active" src="./img/Easy_active.png" name="easy"></img>
+         <img id="medium_active" src="./img/Medium_active.png" value="medium"></img>
+         <img id="hard_active" src="./img/Hard_active.png" value="hard"></img>
+         <img id="extreme_active" src="./img/Extreme_active.png" value="extreme" ></img>
+
+         <img id="easy" src="./img/Easy.png" value="easy"></img>
+         <img id="medium" src="./img/Medium.png" value="medium">	</img>
+         <img id="hard" src="./img/Hard.png" value="hard"> </img>
+         <img id="extreme" src="./img/Extreme.png"value="extreme"></img>
+       </div>
+       <button id="btn2" type="submit">Continue</button>
+     </div>
+
+
+   </div>
+
+     <div id="content3">
+       <img class="art" src="./img/Illustration.png"></img>
+       <img class="text" src="./img/TextWrapper.png"></img>
+       <button id="btn3" type="submit">Start your journey! </button>
+
+     </div>
+
+
+ <script src='./js/utils.js'></script>
+ <script src='./js/bs-fitness.js'></script>
+
+ </body>
+
+</html>
