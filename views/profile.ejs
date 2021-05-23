@@ -11,6 +11,7 @@
       <h1 id='favorsList'>
         Favor Requests
       </h1>
+      <p id="favor"></p>
     </div>
     <div id='friends'>
       <h1 id='favorsList'>
@@ -24,5 +25,62 @@
     </div>
 
   </body>
+  <script>
+  // function pullData(array, parentElement){
+  //   array.forEach(element => parentElement.append('\n'+"✅ "+element+'\n'));
+  //
+  // }
+  var db = ['I need 14 eth', 'Send me an NFT', 'Write me a funny story', 'Leave me a comment on my blog'];
+  var f = ['x0jkbdfwgefg87348274g2t286t2836', 'john.eth', 'x0nbsac7et283bdy28de', 'vitalk.eth'];
+
+
+  // pullData(db, document.querySelector('#favor'));
+
+  function pullFavor(array){
+    array.forEach(function(element){
+
+      // create a new div element
+      var newDiv = document.createElement("p");
+
+      // and give it some content
+      var newContent = document.createTextNode('✅ '+element);
+
+      // add the text node to the newly created div
+      newDiv.appendChild(newContent);
+
+      // add the newly created element and its content into the DOM
+      var currentDiv = document.getElementById("favors");
+      newDiv.setAttribute("id", "favorsList_items");
+      currentDiv.appendChild(newDiv);
+    });
+
+  }
+
+  pullFavor(db);
+
+
+  function pullFriends(array){
+    array.forEach(function(element){
+
+      // create a new div element
+      var newDiv = document.createElement("p");
+
+      // and give it some content
+      var newContent = document.createTextNode('🧑 '+element+' →');
+
+      // add the text node to the newly created div
+      newDiv.appendChild(newContent);
+
+      // add the newly created element and its content into the DOM
+      var currentDiv = document.getElementById("friends");
+      newDiv.setAttribute("id", "favorsList_items");
+      currentDiv.appendChild(newDiv);
+    });
+
+  }
+
+  pullFriends(f);
+  </script>
+
 
 </html>

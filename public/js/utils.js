@@ -71,6 +71,13 @@ var art = document.querySelector('.art');
 
   }
 
+  function pullData(array, parentElement){
+    array.forEach(element => parentElement.append("✅ "+element));
+
+
+
+  }
+
 
 
   function animate(x){

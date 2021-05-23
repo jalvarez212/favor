@@ -47,7 +47,30 @@ color: #01033A;
 flex: none;
 order: 0;
 align-self: center;
-margin: 40px 40px;
+margin: 40px 80px;
+}
+
+#favorsList_items{
+position: static;
+width: 75%;
+/*height: 111px;*/
+left: 0px;
+top: 0px;
+
+/* Title/Main */
+font-family: Helvetica;
+font-style: normal;
+font-size: 25px;
+letter-spacing: -0.2px;
+
+/* Utilities/Black */
+color: #01033A;
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: center;
+margin: 40px 80px;
 }
 
 
@@ -57,6 +80,7 @@ margin: 40px 40px;
 
 position: fixed;
 margin-left: 5%;
+margin-top: 10%;
 width: 90%;
 left: 0px;
 top: 35%;
@@ -76,6 +100,7 @@ transition: top .3s ease-in-out;
 
 position: fixed;
 margin-left: 5%;
+margin-top: 20%;
 width: 90%;
 left: 0px;
 top: 55%;
