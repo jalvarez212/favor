@@ -4,42 +4,9 @@
  <head>
    <meta charset="UTF-8">
    <title>favor</title>
-
- </head>
- <body>
-
- </body>
-</html>
-
-<!DOCTYPE html>
-<html>
- <head>
-   <meta charset="UTF-8">
-   <title>favor</title>
    <script type="text/javascript">
 
-   function checkWeb3(){
-     if (window.ethereum) {
-       //window.web3 = new Web3(ethereum);
-       try {
-         // Request account access if needed
-         ethereum.enable();
-       } catch (error) {
-        alert('Please enable web3 to use this application');
-         // User denied account access…
-       }
-     } else if (window.web3) {
-       // Legacy dapp browsers…
-       window.web3 = new Web3(web3.currentProvider);
-     } else {
-       // Non-dapp browsers…
-       alert('Please enable web3 to use this application');
-       console.log(
-         'Non-Ethereum browser detected. You should consider trying Status!'
-       );
-     }
-     console.log(web3);
-    }
+
 
 
 
@@ -68,62 +35,45 @@
        </h1>
          <input id="subdomain" placeholder="What's your favor?"></input>
        <button id="btn">Continue</button>
+       <!-- //customize and complie contract? -->
 
      </div>
 
 
-
-
-
-     <div id="content1">
-         <h1 class='weight'>What's your
+     <div class="content1">
+       <h1>Connect your wallet
          <br>
-         preferred
-         <br>
-         workout?
-         </h1>
-       <div id="mode">
-       <!-- I toke some shortcuts and used images for the easy/medium/hard/extreme tiles -->
+       </h1>
+   <!-- I toke some shortcuts and used images for the easy/medium/hard/extreme tiles -->
 
-         <img id="easy_active" src="./img/Easy_active.png" name="easy"></img>
-         <img id="medium_active" src="./img/Medium_active.png" value="medium"></img>
-         <img id="hard_active" src="./img/Hard_active.png" value="hard"></img>
-         <img id="extreme_active" src="./img/Extreme_active.png" value="extreme" ></img>
-
-         <img id="easy" src="./img/Easy.png" value="easy"></img>
-         <img id="medium" src="./img/Medium.png" value="medium">	</img>
-         <img id="hard" src="./img/Hard.png" value="hard"> </img>
-         <img id="extreme" src="./img/Extreme.png"value="extreme"></img>
-       </div>
-       <button id="btn2" type="submit">Continue</button>
-     </div>
+      <img id="metamask" src="./img/MetaMask.svg" value="metamask"><p id="metamaskText">MetaMask ➞</p></img>
+      <img id="status" src="./img/status.svg" value="status"><p id="statusText">Status ➞</p></img>
 
 
+    </div>
+    <div class="content2">
+      <h1>Confirm your favor and publish
+        <br>
+      </h1>
+      <p id="favor"></p>
+      <button id="btn1">Publish</button>
+      <!-- //deploy contract with web3 deploy method -->
    </div>
-
-   <div id="content2">
-   <h1 class ="weight">Ready to send
-     <br>
-     contract to the blockchain?
-     <br>
+   <div class="content3">
+     <img class="art" src="./img/Illustration.png"></img>
+     <p id="finish"> You did it! Welcome to the blockchain!</p>
+     <p id="finish1"> Go to your profile to edit your contract, add favors, and interact with your friends. You can only add friends by doing or recieving favors</p>
 
 
+     <button id="btn2" type="submit">Go to your profile</button>
 
+     <!-- //re-direct to profile -->
+  </div>
 
-   <button id="btn1" type="submit">Send</button>
- </div>
-
-     <div id="content3">
-       <img class="art" src="./img/Illustration.png"></img>
-       <img class="text" src="./img/TextWrapper.png"></img>
-       <button id="btn3" type="submit">Start your journey! </button>
-
-     </div>
+  </div>
 
 
  <script src='./js/utils.js'></script>
- <script src='./js/bs-fitness.js'></script>
-
  </body>
 
 </html>

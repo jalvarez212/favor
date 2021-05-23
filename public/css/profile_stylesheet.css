@@ -1,0 +1,90 @@
+
+
+body {
+position: relative;
+width: 100%;
+height: 100%;
+
+/* Accent/Main */
+background: #7D7EF3;
+}
+
+#favors{
+
+position: fixed;
+margin-left: 5%;
+width: 90%;
+left: 0px;
+top: 15%;
+
+/* Utilities/White */
+background: #FFFFFF;
+border-radius: 100px 100px 100px 100px;
+-webkit-transition: top .3s ease-in-out;
+-moz-transition: top .3s ease-in-out;
+-o-transition: top .3s ease-in-out;
+transition: top .3s ease-in-out;
+}
+
+#favorsList{
+position: static;
+width: 75%;
+/*height: 111px;*/
+left: 0px;
+top: 0px;
+
+/* Title/Main */
+font-family: Helvetica;
+font-style: normal;
+font-weight: bold;
+font-size: 35px;
+letter-spacing: -0.2px;
+
+/* Utilities/Black */
+color: #01033A;
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: center;
+margin: 40px 40px;
+}
+
+
+
+
+#friends{
+
+position: fixed;
+margin-left: 5%;
+width: 90%;
+left: 0px;
+top: 35%;
+
+/* Utilities/White */
+background: #FFFFFF;
+border-radius: 100px 100px 100px 100px;
+-webkit-transition: top .3s ease-in-out;
+-moz-transition: top .3s ease-in-out;
+-o-transition: top .3s ease-in-out;
+transition: top .3s ease-in-out;
+}
+
+
+
+#status{
+
+position: fixed;
+margin-left: 5%;
+width: 90%;
+left: 0px;
+top: 55%;
+
+/* Utilities/White */
+background: #FFFFFF;
+border-radius: 100px 100px 100px 100px;
+-webkit-transition: top .3s ease-in-out;
+-moz-transition: top .3s ease-in-out;
+-o-transition: top .3s ease-in-out;
+transition: top .3s ease-in-out;
+}
