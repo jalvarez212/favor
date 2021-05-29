@@ -1,5 +1,5 @@
 var Web3 = require('web3');
-var myContract = require('./build/contracts/Storage.json')
+var myContract = require('./build/contracts/Storage_test.json')
 var address = "0x1f44637eaE96B392daeB268d7587e9Ef4fAA846F";
 
 var createError = require('http-errors');
@@ -14,7 +14,9 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
+var solc = require('solc');
 
+console.log(solc);
 
 const changeNum = async () => {
   const web3 = new Web3('https://rinkeby.infura.io/v3/8aa0a38978ed446fad3e8cc015637b6f');
@@ -23,7 +25,7 @@ const changeNum = async () => {
   const contract = new web3.eth.Contract( myContract.abi, deployedNetwork.address);
   const wallet = await web3.eth.accounts.wallet.add('8fc27cc16fe0029697826fab6f4ea565e14aa4fc842463c55f47ac9053db4976');
 
-  await contract.methods.store(777).send({
+  await contract.methods.store('I need 14th').send({
     from: wallet.address,
     gas: 300000
 
@@ -44,6 +46,7 @@ const changeNum = async () => {
 });
 
 }
+
 
 const viewNum = async () => {
   const web3 = new Web3('https://rinkeby.infura.io/v3/8aa0a38978ed446fad3e8cc015637b6f');
@@ -82,6 +85,8 @@ console.log(getData);
 
 }
 
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -112,13 +117,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.get('/', function(req, res) {
-	res.render('index');
-});
 
-app.get('/profile', function(req, res) {
-	res.render('profile');
-});
 
 
 

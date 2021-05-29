@@ -20,12 +20,33 @@
 
 var art = document.querySelector('.art');
 
+ async function postData(){
+    await fetch('/api', {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      headers: {
+        'Content-Type': 'application/json'
+        //'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(localStorage)
+    })
+
+}
+
+
+
+
 
 // functions
 // app methods
   function getFavor() {
         localStorage.setItem('Favor_1', q.value);
-        console.log(localStorage);
+        console.log(JSON.stringify(localStorage.Favor_1));
+        var response = postData();
+        const json = await response.json();
+        console.log(json);
+
+
+
         //settimeout hides h1 text until animation is ready for next content
         setTimeout(function(){
         element1.style.display = 'flex';
@@ -71,12 +92,7 @@ var art = document.querySelector('.art');
 
   }
 
-  function pullData(array, parentElement){
-    array.forEach(element => parentElement.append("✅ "+element));
 
-
-
-  }
 
 
 
