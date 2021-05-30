@@ -19,6 +19,7 @@
     var favorList= document.querySelector('#favor');
 
 var art = document.querySelector('.art');
+var contract;
 
  async function postData(){
     await fetch('/api', {
@@ -28,7 +29,12 @@ var art = document.querySelector('.art');
         //'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: JSON.stringify(localStorage)
-    })
+    })  .then(response => response.json())
+  .then(function(data){
+    console.log(data);
+    contract = data;
+
+  });
 
 }
 
@@ -41,9 +47,8 @@ var art = document.querySelector('.art');
   function getFavor() {
         localStorage.setItem('Favor_1', q.value);
         console.log(JSON.stringify(localStorage.Favor_1));
-        var response = postData();
-        const json = await response.json();
-        console.log(json);
+        postData();
+
 
 
 
@@ -145,12 +150,38 @@ q.addEventListener('click', function (event) {
 
 btn1.addEventListener('click',
        				function(){
-       					element2.style.display = 'none';
-       					element3.style.display = 'flex';
-       					progress2.style.display = 'none';
-       					bottom.style.top = '100%';
-       					back.style.display = 'none';
-       					setTimeout(function(){ art.style.opacity = 1;}, 100);
+                if(contract != null){
+                  element2.style.display = 'none';
+                  element3.style.display = 'flex';
+                  progress2.style.display = 'none';
+                  bottom.style.top = '100%';
+                  back.style.display = 'none';
+                  setTimeout(function(){ art.style.opacity = 1;}, 100);
+                  const transactionParameters = {
+                    nonce: '0x00', // ignored by MetaMask
+                    // gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
+                    // gas: '0x2710', // customizable by user during MetaMask confirmation.
+                    from: ethereum.selectedAddress, // must match user's active address.
+                    value: '0x00', // Only required to send ether to the recipient from the initiating external account.
+                    data:
+                      contract["Storage_test.sol"].Storage_test.evm.bytecode.object, // Optional, but used for defining smart contract creation and interaction.
+                    chainId: '0x4', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
+                  };
+
+                  // txHash is a hex string
+                  // As with any RPC call, it may throw an error
+                  const txHash = ethereum.request({
+                    method: 'eth_sendTransaction',
+                    params: [transactionParameters],
+                  });
+
+                  console.log(txHash);
+
+                }
+                else{
+                  alert('There was an error compiling your request. Please refresh.')
+                }
+
        					 });
 
 
