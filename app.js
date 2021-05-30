@@ -1,6 +1,4 @@
-var Web3 = require('web3');
-var myContract = require('./build/contracts/Storage_test.json')
-var address = "0x1f44637eaE96B392daeB268d7587e9Ef4fAA846F";
+
 
 var createError = require('http-errors');
 var express = require('express');
