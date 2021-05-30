@@ -21,3 +21,10 @@ For best experience use Firefox or Chrome with web3 extension and mobile device 
 2. Messaging and interaction between friends not built yet.
 3. Favor verification from smart contract not designed yet.
 4. Data on the smart contract is not encrypted
+
+
+### OPPORTUNITY
+
+Social media sucks. You share thing with a bunch of people they may or may not have any place in your life and your data is used against you.
+
+Favor tries to reinvent social by revolving it around favors. Granting or receiving favors is the only way to add friends on this network. All the data lives on the blockchain so no one can use it against you and is not vulnerable in a centralized location.  

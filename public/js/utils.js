@@ -200,7 +200,7 @@ function goprofile(){
 
 };
 
-btn2.addEventListener('click', goprofile);
+btn2.addEventListener('click', function(){goprofile()});
 
 back.addEventListener('click', function(){
   		if (element1.style.display == 'flex'){

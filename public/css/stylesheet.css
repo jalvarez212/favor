@@ -166,12 +166,6 @@ font-family: Helvetica;
 font-style: normal;
 font-weight: bold;
 font-size: 45px;
-pointer-events: none;
-  transform           : rotate(0deg);
-  -webkit-animation: btnWiggle 4.5s infinite;
-  -moz-animation: btnWiggle 4.5s infinite;
-  -o-animation: btnWiggle 4.5s infinite;
-  animation: btnWiggle 4.5s infinite;
 
 
 /* identical to box height */
@@ -466,7 +460,6 @@ font-family: Helvetica;
 font-style: normal;
 font-weight: bold;
 font-size: 45px;
-pointer-events: none;
 
 
 /* identical to box height */
