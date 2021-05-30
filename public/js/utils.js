@@ -117,6 +117,7 @@ var contract;
             connectWallet();
 
 
+
           } catch (error) {
            alert('Please enable web3 to use this application');
             // User denied account access…
@@ -152,11 +153,11 @@ btn1.addEventListener('click',
        				function(){
                 if(contract != null){
                   element2.style.display = 'none';
-                  element3.style.display = 'flex';
                   progress2.style.display = 'none';
                   bottom.style.top = '100%';
                   back.style.display = 'none';
                   setTimeout(function(){ art.style.opacity = 1;}, 100);
+
                   const transactionParameters = {
                     nonce: '0x00', // ignored by MetaMask
                     // gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
@@ -170,19 +171,28 @@ btn1.addEventListener('click',
 
                   // txHash is a hex string
                   // As with any RPC call, it may throw an error
-                  const txHash = ethereum.request({
+                  ethereum.request({
                     method: 'eth_sendTransaction',
                     params: [transactionParameters],
+                  })
+                  .then((result) => {
+                    console.log(result.options);
+                    element3.style.display = 'flex';
+                    setTimeout(function(){ art.style.opacity = 1;}, 100);
+
+                  })
+                  .catch((error) => {
+                    alert('Uh oh, something went wrong with your transaction. Try again.')
                   });
 
-                  console.log(txHash);
+
 
                 }
-                else{
+              else{
                   alert('There was an error compiling your request. Please refresh.')
                 }
 
-       					 });
+    });
 
 
 btn.addEventListener('click', getFavor);
