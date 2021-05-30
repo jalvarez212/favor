@@ -1,16 +1,32 @@
 # favor
-Social network dapp built on Ethereum
+Social dapp built on Ethereum. Users publish favors to smart contracts. Doing or receiving a favor that is confirmed by contract exposes keys and opens up lines of interaction between addresses.  
 
-Project Architecture
+The application only facilitates the writing and reading of smart contracts and is not intended to store any data. The goal is to keep it light weight and handle most things on the client.  
 
-1. 'contracts': Holds several contracts.
-2. 'scripts': Holds two scripts to deploy a contract. It is explained below.
-3. 'tests': Contains one test file for 'Ballot' contract with unit tests in Solidity.
+The application compiles a solidity contract using the users custom input to create the favor contract and sends it to the client. Once compiled and sent, the user is prompted to publish contract using wallet. 
 
-SCRIPTS
+The owners of the contract can then read from the contract to populate the profile page. Owners will also be able to update their contract and interact with friends from profile page.   
 
-The 'scripts' folder contains example async/await scripts for deploying the 'Storage' contract.
-For the deployment of any other contract, 'contractName' and 'constructorArgs' should be updated (along with other code if required). 
+
+##USAGE
+
+Run `node app.js` from project directory.
+
+For best experience use Firefox or Chrome with web3 extension and mobile device emulator enabled. 
+
+
+##CURRENT LIMITATIONS
+1. Currently there is no easy way to share favors/requests with others.
+2. Messaging and interaction between friends not built yet.
+3. Favor verification from smart contract not designed yet.
+4. Data on the smart contract is not encrypted 
+
+
+
+
+
+
+
 
 
 

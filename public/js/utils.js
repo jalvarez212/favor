@@ -44,7 +44,7 @@ var contract;
 
 // functions
 // app methods
-  function getFavor() {
+function getFavor() {
         localStorage.setItem('Favor_1', q.value);
         console.log(JSON.stringify(localStorage.Favor_1));
         postData();
@@ -71,14 +71,14 @@ var contract;
         storeFavor();
       }
 
-  function storeFavor(){
+function storeFavor(){
         var favor_1 = document.querySelector('.nameValue');
 
 
   }
 
 
-  function connectWallet(){
+function connectWallet(){
           //settimeout hides h1 text until animation is ready for next content
           setTimeout(function(){
           element2.style.display = 'flex';
@@ -92,7 +92,7 @@ var contract;
 
   }
 
-  function pullFavors(){
+function pullFavors(){
     favorList.append("✅ "+localStorage.Favor_1)
 
   }
@@ -100,15 +100,14 @@ var contract;
 
 
 
-
-  function animate(x){
+function animate(x){
         //animate the bottom sheet holding the onboarding content/input in an up and down animation
         x.style.top = '100%';
         setTimeout(function(){ x.style.top = '15%'; }, 500);
 
       }
 
-  function checkWeb3(){
+function checkWeb3(){
         if (window.ethereum) {
           //window.web3 = new Web3(ethereum);
           try {
@@ -176,7 +175,7 @@ btn1.addEventListener('click',
                     params: [transactionParameters],
                   })
                   .then((result) => {
-                    console.log(result.options);
+                    console.log(result);
                     element3.style.display = 'flex';
                     setTimeout(function(){ art.style.opacity = 1;}, 100);
 
@@ -197,8 +196,8 @@ btn1.addEventListener('click',
 
 btn.addEventListener('click', getFavor);
 function goprofile(){
-  //window.location = '/profile';
-  console.log('wtf');
+  window.location = 'http://localhost:3000/profile';
+
 };
 
 btn2.addEventListener('click', goprofile);
@@ -217,12 +216,12 @@ back.addEventListener('click', function(){
     // status.addEventListener('click', function(){
     //   checkWeb3();
     // });
-    statusText.addEventListener('click', function(){
+statusText.addEventListener('click', function(){
       checkWeb3();
     });
-    metamask.addEventListener('click', function(){
+metamask.addEventListener('click', function(){
       checkWeb3();
     });
-    metamaskText.addEventListener('click', function(){
+metamaskText.addEventListener('click', function(){
       checkWeb3();
     });
