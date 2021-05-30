@@ -8,14 +8,14 @@ The application compiles a solidity contract using the users custom input to cre
 The owners of the contract can then read from the contract to populate the profile page. Owners will also be able to update their contract and interact with friends from profile page.   
 
 
-###USAGE
+## USAGE
 
 Run `node app.js` from project directory.
 
 For best experience use Firefox or Chrome with web3 extension and mobile device emulator enabled.
 
 
-###CURRENT LIMITATIONS
+## CURRENT LIMITATIONS
 
 1. Currently there is no easy way to share favors/requests with others.
 2. Messaging and interaction between friends not built yet.
