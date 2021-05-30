@@ -10,7 +10,7 @@ The owners of the contract can then read from the contract to populate the profi
 
 ### USAGE
 
-Run `node app.js` in terminal from project directory.
+Run `node app.js` in terminal from project directory. The navigate to http://localhost:3000/ in your browser.
 
 For best experience use Firefox or Chrome with web3 extension and mobile device emulator enabled.
 
