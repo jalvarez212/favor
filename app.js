@@ -13,8 +13,6 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -46,9 +44,6 @@ app.use(function(err, req, res, next) {
 });
 
 
-
-
-
 app.listen(port);
 
 module.exports = app;
@@ -56,7 +51,3 @@ module.exports = app;
 
 
 
-
-// set provider for all later instances to use
-//Contract.setProvider('wss://rinkeby.infura.io/ws/v3/8aa0a38978ed446fad3e8cc015637b6f');
-//var contract = new Contract([jsonInterface], address);
